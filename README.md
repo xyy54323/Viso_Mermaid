@@ -2,7 +2,6 @@
 # viso_Mermaid
 一个viso插件，使用Mermaid代码一键生成流程图！我再也不想画了！
 =======
-# Visio Mermaid 流程图生成插件
 
 这是一个基于 **VSTO + Microsoft Visio Interop** 的 Visio 加载项项目，用来把 Mermaid 流程图代码转换成 Visio 中的流程图节点和连接线。
 
