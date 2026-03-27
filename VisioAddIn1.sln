@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisioAddIn1", "VisioAddIn1.csproj", "{DD0CA0A3-8AE0-40E8-95A2-AC8AE12BBFA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD0CA0A3-8AE0-40E8-95A2-AC8AE12BBFA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD0CA0A3-8AE0-40E8-95A2-AC8AE12BBFA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD0CA0A3-8AE0-40E8-95A2-AC8AE12BBFA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD0CA0A3-8AE0-40E8-95A2-AC8AE12BBFA7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AFD56EC1-3B94-44B1-97F2-AD03961A7D6E}
+	EndGlobalSection
+EndGlobal
