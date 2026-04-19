@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="980" viewBox="0 0 1400 980">
+  <defs>
+    <style>
+      .title { font: 700 30px 'Microsoft YaHei', 'PingFang SC', sans-serif; fill: #111827; }
+      .subtitle { font: 400 15px 'Microsoft YaHei', 'PingFang SC', sans-serif; fill: #4b5563; }
+      .class-name { font: 700 18px 'Consolas', 'Microsoft YaHei', monospace; fill: #111827; }
+      .method { font: 15px 'Consolas', 'Microsoft YaHei', monospace; fill: #1f2937; }
+      .field { font: 15px 'Consolas', 'Microsoft YaHei', monospace; fill: #374151; }
+      .label { font: 13px 'Microsoft YaHei', 'PingFang SC', sans-serif; fill: #374151; }
+      .box { fill: #ffffff; stroke: #111827; stroke-width: 2; rx: 10; ry: 10; }
+      .header { fill: #f3f4f6; stroke: #111827; stroke-width: 2; }
+      .line { stroke: #111827; stroke-width: 2; fill: none; }
+      .dash { stroke: #6b7280; stroke-width: 2; fill: none; stroke-dasharray: 8 6; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#111827" />
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1400" height="980" fill="#f9fafb" />
+  <text x="700" y="52" text-anchor="middle" class="title">Login/Register Module Class Diagram</text>
+  <text x="700" y="80" text-anchor="middle" class="subtitle">UI -> Presenter -> Service -> API -> Session / Model</text>
+
+  <!-- LoginActivity -->
+  <g transform="translate(70,130)">
+    <rect class="box" x="0" y="0" width="270" height="190" />
+    <rect class="header" x="0" y="0" width="270" height="42" />
+    <line class="line" x1="0" y1="42" x2="270" y2="42" />
+    <text x="135" y="27" text-anchor="middle" class="class-name">LoginActivity</text>
+    <text x="18" y="70" class="method">+ submitLogin()</text>
+    <text x="18" y="98" class="method">+ showError()</text>
+    <text x="18" y="126" class="method">+ navigateToHome()</text>
+    <text x="18" y="154" class="method">+ showRegisterPage()</text>
+  </g>
+
+  <!-- RegisterActivity -->
+  <g transform="translate(70,390)">
+    <rect class="box" x="0" y="0" width="270" height="190" />
+    <rect class="header" x="0" y="0" width="270" height="42" />
+    <line class="line" x1="0" y1="42" x2="270" y2="42" />
+    <text x="135" y="27" text-anchor="middle" class="class-name">RegisterActivity</text>
+    <text x="18" y="70" class="method">+ submitRegister()</text>
+    <text x="18" y="98" class="method">+ showError()</text>
+    <text x="18" y="126" class="method">+ showSuccess()</text>
+    <text x="18" y="154" class="method">+ backToLogin()</text>
+  </g>
+
+  <!-- LoginPresenter -->
+  <g transform="translate(450,250)">
+    <rect class="box" x="0" y="0" width="290" height="220" />
+    <rect class="header" x="0" y="0" width="290" height="42" />
+    <line class="line" x1="0" y1="42" x2="290" y2="42" />
+    <text x="145" y="27" text-anchor="middle" class="class-name">LoginPresenter</text>
+    <text x="18" y="70" class="method">+ login(account, password)</text>
+    <text x="18" y="98" class="method">+ register(registerInfo)</text>
+    <text x="18" y="126" class="method">+ handleLoginResult()</text>
+    <text x="18" y="154" class="method">+ handleRegisterResult()</text>
+    <text x="18" y="182" class="method">+ checkLoginStatus()</text>
+  </g>
+
+  <!-- LoginService -->
+  <g transform="translate(850,250)">
+    <rect class="box" x="0" y="0" width="290" height="190" />
+    <rect class="header" x="0" y="0" width="290" height="42" />
+    <line class="line" x1="0" y1="42" x2="290" y2="42" />
+    <text x="145" y="27" text-anchor="middle" class="class-name">LoginService</text>
+    <text x="18" y="70" class="method">+ login(account, password)</text>
+    <text x="18" y="98" class="method">+ register(registerInfo)</text>
+    <text x="18" y="126" class="method">+ parseLoginResponse()</text>
+    <text x="18" y="154" class="method">+ parseRegisterResponse()</text>
+  </g>
+
+  <!-- LoginApi -->
+  <g transform="translate(1160,120)">
+    <rect class="box" x="0" y="0" width="190" height="170" />
+    <rect class="header" x="0" y="0" width="190" height="42" />
+    <line class="line" x1="0" y1="42" x2="190" y2="42" />
+    <text x="95" y="27" text-anchor="middle" class="class-name">LoginApi</text>
+    <text x="18" y="70" class="method">+ login(request)</text>
+    <text x="18" y="98" class="method">+ register(request)</text>
+    <text x="18" y="126" class="method">+ post(url, body)</text>
+  </g>
+
+  <!-- SessionManager -->
+  <g transform="translate(1160,360)">
+    <rect class="box" x="0" y="0" width="190" height="190" />
+    <rect class="header" x="0" y="0" width="190" height="42" />
+    <line class="line" x1="0" y1="42" x2="190" y2="42" />
+    <text x="95" y="27" text-anchor="middle" class="class-name">SessionManager</text>
+    <text x="18" y="70" class="method">+ saveSession(user, token)</text>
+    <text x="18" y="98" class="method">+ getSession()</text>
+    <text x="18" y="126" class="method">+ clearSession()</text>
+    <text x="18" y="154" class="method">+ isLoggedIn()</text>
+  </g>
+
+  <!-- User -->
+  <g transform="translate(850,610)">
+    <rect class="box" x="0" y="0" width="240" height="170" />
+    <rect class="header" x="0" y="0" width="240" height="42" />
+    <line class="line" x1="0" y1="42" x2="240" y2="42" />
+    <text x="120" y="27" text-anchor="middle" class="class-name">User</text>
+    <text x="18" y="70" class="field">+ userId</text>
+    <text x="18" y="98" class="field">+ username</text>
+    <text x="18" y="126" class="field">+ account</text>
+  </g>
+
+  <!-- LoginRequest -->
+  <g transform="translate(450,610)">
+    <rect class="box" x="0" y="0" width="240" height="150" />
+    <rect class="header" x="0" y="0" width="240" height="42" />
+    <line class="line" x1="0" y1="42" x2="240" y2="42" />
+    <text x="120" y="27" text-anchor="middle" class="class-name">LoginRequest</text>
+    <text x="18" y="70" class="field">+ account</text>
+    <text x="18" y="98" class="field">+ password</text>
+  </g>
+
+  <!-- LoginResponse -->
+  <g transform="translate(70,690)">
+    <rect class="box" x="0" y="0" width="270" height="180" />
+    <rect class="header" x="0" y="0" width="270" height="42" />
+    <line class="line" x1="0" y1="42" x2="270" y2="42" />
+    <text x="135" y="27" text-anchor="middle" class="class-name">LoginResponse</text>
+    <text x="18" y="70" class="field">+ success</text>
+    <text x="18" y="98" class="field">+ token</text>
+    <text x="18" y="126" class="field">+ userInfo</text>
+    <text x="18" y="154" class="field">+ message</text>
+  </g>
+
+  <!-- RegisterResponse -->
+  <g transform="translate(1160,640)">
+    <rect class="box" x="0" y="0" width="190" height="160" />
+    <rect class="header" x="0" y="0" width="190" height="42" />
+    <line class="line" x1="0" y1="42" x2="190" y2="42" />
+    <text x="95" y="27" text-anchor="middle" class="class-name">RegisterResponse</text>
+    <text x="18" y="70" class="field">+ success</text>
+    <text x="18" y="98" class="field">+ userId</text>
+    <text x="18" y="126" class="field">+ message</text>
+  </g>
+
+  <!-- Relations -->
+  <path class="line" marker-end="url(#arrow)" d="M 340 225 C 390 225, 400 300, 450 300" />
+  <text x="355" y="210" class="label">submit login</text>
+
+  <path class="line" marker-end="url(#arrow)" d="M 340 485 C 390 485, 400 420, 450 420" />
+  <text x="354" y="474" class="label">submit register</text>
+
+  <path class="line" marker-end="url(#arrow)" d="M 740 345 L 850 345" />
+  <text x="776" y="332" class="label">call service</text>
+
+  <path class="line" marker-end="url(#arrow)" d="M 1140 305 C 1160 305, 1160 220, 1160 220" />
+  <text x="1090" y="228" class="label">request API</text>
+
+  <path class="line" marker-end="url(#arrow)" d="M 1140 375 C 1165 375, 1165 455, 1160 455" />
+  <text x="1086" y="470" class="label">save session</text>
+
+  <path class="dash" marker-end="url(#arrow)" d="M 645 470 L 600 610" />
+  <text x="515" y="520" class="label">build request</text>
+
+  <path class="dash" marker-end="url(#arrow)" d="M 1160 205 C 1020 205, 980 190, 970 250" />
+  <text x="1032" y="170" class="label">returns response</text>
+
+  <path class="dash" marker-end="url(#arrow)" d="M 850 720 L 690 720" />
+  <text x="742" y="705" class="label">user info</text>
+
+  <path class="dash" marker-end="url(#arrow)" d="M 250 690 C 300 620, 380 510, 450 445" />
+  <text x="276" y="612" class="label">result</text>
+
+  <path class="dash" marker-end="url(#arrow)" d="M 1160 720 L 1090 720" />
+  <text x="1110" y="705" class="label">register result</text>
+
+  <path class="dash" marker-end="url(#arrow)" d="M 1255 550 L 1000 610" />
+  <text x="1090" y="565" class="label">stores user</text>
+</svg>

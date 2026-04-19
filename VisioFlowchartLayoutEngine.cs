@@ -130,12 +130,13 @@ namespace VisioAddIn1
                 var current = queue.Dequeue();
                 foreach (var next in layoutData.OutgoingEdges[current])
                 {
-                    int candidateDepth = depthMap[current] + 1;
-                    if (candidateDepth > depthMap[next])
+                    if (depthMap[next] >= 0)
                     {
-                        depthMap[next] = candidateDepth;
-                        queue.Enqueue(next);
+                        continue;
                     }
+
+                    depthMap[next] = depthMap[current] + 1;
+                    queue.Enqueue(next);
                 }
             }
 
